@@ -3,7 +3,8 @@ currentPath=pwd;
 addpath(genpath([currentPath filesep 'core']));
 addpath(genpath([currentPath filesep 'utils']));
 addpath(genpath([currentPath filesep 'plugins']));
-
+mkdir([currentPath filesep 'output_img'])
+for itr = 1:100
 %% Basic CellGen Example
 % This is a basic CellGen example 
 % The synthetic image generated here consists of a single type of cell
@@ -283,16 +284,15 @@ cellgen_result=cellgen_engine(cellgen_data,1);
 
 
 %plot generated single channel uint16 image with yellow colormap
-yellowMap = [linspace(0, 1, 256)', linspace(0, 1, 256)', zeros(256, 1)];
-figure(1);colormap(yellowMap);imagesc(uint16(round(cellgen_result(1).channel_images.Yellow*65535)));axis off; axis equal;colorbar;
-pause(0.2);
+filename=[ currentPath filesep 'output_img' filesep 'image_' sprintf(['%0' num2str(4) 'd'], itr) '.png'];
+imwrite(uint16(round(cellgen_result(1).channel_images.Yellow*65535)),filename);
 
 %plot mask 
-figure(2);
 mask = zeros(cellgen_data.cellgen_image_size(1),cellgen_data.cellgen_image_size(2));
 for i = 1:cellgen_data.number_of_cells
     mask(cellgen_result.mask_of_object_by_cell(i).Cyto>0)=i;
 end
-imagesc(mask);colorbar;
+filename_mask=[ currentPath filesep 'output_img' filesep 'mask_' sprintf(['%0' num2str(4) 'd'], itr) '.png'];
+imwrite(mask,filename_mask);
 
-
+end 
