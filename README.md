@@ -21,8 +21,8 @@ For curve fitting, cscvn package is required.
 
 Running 'cellgen_single_marker.m' should give you two images, one is generated cell image and the other one is the mask image
 
-!(https://github.com/no1summer/fluorescence_cell_generator/blob/main/example_figure1.tif)
-!(https://github.com/no1summer/fluorescence_cell_generator/blob/main/example_figure2.tif)
+![output_example_figure1](https://github.com/no1summer/fluorescence_cell_generator/blob/main/example_figure1.png)
+![output_example_figure2](https://github.com/no1summer/fluorescence_cell_generator/blob/main/example_figure2.png)
 
 Then I will run 'cellgen_single_marker_runinbatch.m' which generate 100 cell images as well as true mask in its the subfolder. 
 
