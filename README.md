@@ -28,6 +28,8 @@ Then I will run `cellgen_single_marker_runinbatch.m` which generate 100 cell ima
 
 ## Part 2. Cellpose segmentation on the generated cell images
 
+**_Stringer, Carsen, et al. "Cellpose: a generalist algorithm for cellular segmentation." Nature methods 18.1 (2021): 100-106._**
+
 This is the command I use for running the cellpose over generated images
 ```
 python -m cellpose --dir ~/output_img/ --pretrained_model cyto3 --diameter 20 --save_png --verbose --no_npy --savedir ~/output_img/cellpose_img
