@@ -4,6 +4,7 @@ addpath(genpath([currentPath filesep 'core']));
 addpath(genpath([currentPath filesep 'utils']));
 addpath(genpath([currentPath filesep 'plugins']));
 mkdir([currentPath filesep 'output_img'])
+mkdir([currentPath filesep 'output_img' filesep 'true_mask'])
 for itr = 1:100
 %% Basic CellGen Example
 % This is a basic CellGen example 
@@ -292,7 +293,7 @@ mask = zeros(cellgen_data.cellgen_image_size(1),cellgen_data.cellgen_image_size(
 for i = 1:cellgen_data.number_of_cells
     mask(cellgen_result.mask_of_object_by_cell(i).Cyto>0)=i;
 end
-filename_mask=[ currentPath filesep 'output_img' filesep 'mask_' sprintf(['%0' num2str(4) 'd'], itr) '.png'];
+filename_mask=[ currentPath filesep 'output_img' filesep 'true_mask' filesep 'mask_' sprintf(['%0' num2str(4) 'd'], itr) '.png'];
 imwrite(mask,filename_mask);
 
 end 
