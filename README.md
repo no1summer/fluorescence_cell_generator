@@ -19,22 +19,22 @@ For random_sample function, machine learning package is required.
 
 For curve fitting, cscvn package is required. 
 
-Running 'cellgen_single_marker.m' should give you two images, one is generated cell image and the other one is the mask image
+Running `cellgen_single_marker.m` should give you two images, one is generated cell image and the other one is the mask image
 
 ![output_example_figure1](https://github.com/no1summer/fluorescence_cell_generator/blob/main/example_figure1.png)
 ![output_example_figure2](https://github.com/no1summer/fluorescence_cell_generator/blob/main/example_figure2.png)
 
-Then I will run 'cellgen_single_marker_runinbatch.m' which generate 100 cell images as well as true mask in its the subfolder. 
+Then I will run `cellgen_single_marker_runinbatch.m` which generate 100 cell images as well as true mask in its the subfolder. 
 
 ## Part 2. Cellpose segmentation on the generated cell images
 
 This is the command I use for running the cellpose over generated images
-'''
+```
 python -m cellpose --dir ~/output_img/ --pretrained_model cyto3 --diameter 20 --save_png --verbose --no_npy --savedir ~/output_img/cellpose_img
-'''
+```
 Here I am using pretrained model cyto3. 
 
-Then I run the 'cellpose_accuracy.m' which calculates the percentage of the cellpose mask out of the true mask.
+Then I run the `cellpose_accuracy.m` which calculates the percentage of the cellpose mask out of the true mask.
 
 The result shows an accuracy of 99.46%.
 
