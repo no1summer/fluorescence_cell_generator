@@ -4,12 +4,15 @@ This is the repo for a synthetic image generator to generate image and labeled i
 There are two parts in the repo
 
 **1. Cell generating algorithm + true segmentation label**
+
 **2. Comparison of two existing segmentation algorithm - cellprofiler and cellpose**
+
 
 Cellprofiler using intensity threshold for segmentation while the cellpose is a pretrained deep learning method. 
 
 _McQuin, Claire, et al. "CellProfiler 3.0: Next-generation image processing for biology." PLoS biology 16.7 (2018): e2005970._
 _Stringer, Carsen, et al. "Cellpose: a generalist algorithm for cellular segmentation." Nature methods 18.1 (2021): 100-106._
+
 
 My cell generating algorithm is developed inspired by the SimuCell.
 
