@@ -8,6 +8,9 @@ There are two parts in the repo
 
 Cellprofiler using intensity threshold for segmentation while the cellpose is a pretrained deep learning method. 
 
+McQuin, Claire, et al. "CellProfiler 3.0: Next-generation image processing for biology." PLoS biology 16.7 (2018): e2005970.
+Stringer, Carsen, et al. "Cellpose: a generalist algorithm for cellular segmentation." Nature methods 18.1 (2021): 100-106.
+
 My cell generating algorithm is developed inspired by the SimuCell.
 
 Rajaram, Satwik, et al. "SimuCell: a flexible framework for creating synthetic microscopy images." Nature methods 9.7 (2012): 634-635.
